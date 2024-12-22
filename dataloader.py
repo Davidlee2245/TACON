@@ -17,13 +17,13 @@ def load_and_preprocess_data(file_path):
     
     # Check for NaN or inf values
     if np.isnan(data).any() or np.isinf(data).any():
-        print(f"\nFound NaN/inf in file: {os.path.basename(file_path)}")
+        #print(f"\nFound NaN/inf in file: {os.path.basename(file_path)}")
         
         # Fill NaN values with previous timestep values
         for i in range(1, len(data)):  # Start from second timestep
             mask = np.isnan(data[i])
             if mask.any():  # If there are any NaN values in this timestep
-                print(f"Filling NaN values in timestep {i} with values from timestep {i-1}")
+                #print(f"Filling NaN values in timestep {i} with values from timestep {i-1}")
                 data[i][mask] = data[i-1][mask]
         
         # Check if first timestep has NaN values

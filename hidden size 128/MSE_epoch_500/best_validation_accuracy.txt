@@ -1,0 +1,3 @@
+Best Validation Accuracy: 79.46%
+Epoch: 213
+Validation Loss: 0.1805
